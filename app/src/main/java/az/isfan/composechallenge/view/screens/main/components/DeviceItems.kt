@@ -16,7 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import az.isfan.composechallenge.R
-import az.isfan.composechallenge.domain.models.DeviceApiData
+import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 
 @Composable
 fun DeviceItems(

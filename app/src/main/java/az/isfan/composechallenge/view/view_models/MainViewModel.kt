@@ -2,7 +2,7 @@ package az.isfan.composechallenge.view.view_models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import az.isfan.composechallenge.domain.models.DeviceApiData
+import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 import az.isfan.composechallenge.domain.repos.remote.ApiRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

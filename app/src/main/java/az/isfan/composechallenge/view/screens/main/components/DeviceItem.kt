@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import az.isfan.composechallenge.R
-import az.isfan.composechallenge.domain.models.DeviceApiData
+import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 
 @Composable
 fun DeviceItem(

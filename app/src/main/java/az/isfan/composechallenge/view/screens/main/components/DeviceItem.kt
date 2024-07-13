@@ -2,9 +2,13 @@ package az.isfan.composechallenge.view.screens.main.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import az.isfan.composechallenge.R
 import az.isfan.composechallenge.domain.models.DeviceApiData
 
 @Composable
@@ -16,15 +20,18 @@ fun DeviceItem(
             .fillMaxWidth()
     ) {
         Text(
-            text = (device.id ?: "-").toString()
+            text = stringResource(R.string.device_id)+": "+(device.id ?: "-").toString()
         )
 
         Text(
-            text = (device.name ?: "-").toString()
+            text = (device.name ?: "-").toString(),
+            fontWeight = FontWeight.Bold
         )
 
         Text(
             text = device.dataToString()
         )
+
+        HorizontalDivider()
     }
 }

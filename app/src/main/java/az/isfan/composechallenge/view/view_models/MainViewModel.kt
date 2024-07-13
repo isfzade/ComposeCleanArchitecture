@@ -23,6 +23,10 @@ class MainViewModel @Inject constructor(
 
     private var requestJob: Job? = null
 
+    fun resetDevices() {
+        _devices.update { emptyList() }
+    }
+
     fun request() {
         requestJob?.cancel()
         requestJob = viewModelScope.launch(Dispatchers.Default) {

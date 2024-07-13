@@ -31,5 +31,6 @@ fun MainScreen(
 
     LaunchedEffect(timeToRequest) {
         if (timeToRequest) viewModel.request()
+        else viewModel.resetDevices()
     }
 }

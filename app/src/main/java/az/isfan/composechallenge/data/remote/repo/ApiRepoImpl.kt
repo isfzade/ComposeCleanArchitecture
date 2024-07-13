@@ -2,7 +2,7 @@ package az.isfan.composechallenge.data.remote.repo
 
 import az.isfan.composechallenge.data.remote.RetrofitConnection
 import az.isfan.composechallenge.domain.models.DeviceApiData
-import az.isfan.composechallenge.domain.repos.ApiRepo
+import az.isfan.composechallenge.domain.repos.remote.ApiRepo
 import retrofit2.Response
 import javax.inject.Inject
 

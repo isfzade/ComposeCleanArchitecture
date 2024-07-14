@@ -2,8 +2,10 @@ package az.isfan.composechallenge.presentation.view_models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import az.isfan.composechallenge.domain.models.dto.DeviceDto
 import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 import az.isfan.composechallenge.domain.repos.remote.ApiRepo
+import az.isfan.composechallenge.domain.use_cases.RequestAndInsertDevicesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -16,28 +18,27 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val apiRepo: ApiRepo
+    private val requestAndInsertDevicesUseCase: RequestAndInsertDevicesUseCase
 ): ViewModel() {
-    private var _devices = MutableStateFlow<List<DeviceApiData>>(emptyList())
+    private var _devices = MutableStateFlow<List<DeviceDto>>(emptyList())
     var devices = _devices.asStateFlow()
 
-    private var requestJob: Job? = null
+    private var getDataJob: Job? = null
 
     fun resetDevices() {
         _devices.update { emptyList() }
     }
 
     fun request() {
-        requestJob?.cancel()
-        requestJob = viewModelScope.launch(Dispatchers.Default) {
-            val response = withContext(Dispatchers.IO) {
-                apiRepo.request()
-            }
-            if (response.isSuccessful) {
-                response.body()?.let { deviceApiData ->
-                    _devices.update {deviceApiData}
+        getDataJob?.cancel()
+        getDataJob = viewModelScope.launch(Dispatchers.Default) {
+            requestAndInsertDevicesUseCase
+                .invoke()
+                .collect{ dbDevices ->
+                    _devices.update {
+                        dbDevices
+                    }
                 }
-            }
         }
     }
 }

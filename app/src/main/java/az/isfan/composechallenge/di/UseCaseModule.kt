@@ -1,8 +1,9 @@
 package az.isfan.composechallenge.di
 
 import az.isfan.composechallenge.data.remote.RetrofitConnection
+import az.isfan.composechallenge.domain.repos.local.DeviceDbRepo
 import az.isfan.composechallenge.domain.repos.remote.ApiRepo
-import az.isfan.composechallenge.data.remote.repo.ApiRepoImpl
+import az.isfan.composechallenge.domain.use_cases.RequestAndInsertDevicesUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,8 +12,11 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class ApiRepoModule {
+class UseCaseModule {
     @Singleton
     @Provides
-    fun provideApiRepo(): ApiRepo = ApiRepoImpl()
+    fun provideRequestAndInsertDevicesUseCase(
+        apiRepo: ApiRepo,
+        deviceDbRepo: DeviceDbRepo
+    ): RequestAndInsertDevicesUseCase = RequestAndInsertDevicesUseCase(apiRepo, deviceDbRepo)
 }

@@ -4,5 +4,5 @@ import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 import retrofit2.Response
 
 interface ApiRepo {
-    suspend fun request(): Response<List<DeviceApiData>>
+    suspend fun request(): List<DeviceApiData>
 }

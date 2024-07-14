@@ -9,28 +9,31 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import az.isfan.composechallenge.R
+import az.isfan.composechallenge.domain.models.dto.DeviceDto
 import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 
 @Composable
 fun DeviceItem(
-    device: DeviceApiData
+    device: DeviceDto
 ) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
     ) {
         Text(
-            text = stringResource(R.string.device_id)+": "+(device.id ?: "-").toString()
+            text = stringResource(R.string.device_id)+": "+device.id
         )
 
         Text(
-            text = (device.name ?: "-").toString(),
+            text = device.name,
             fontWeight = FontWeight.Bold
         )
 
-        Text(
-            text = device.dataToString()
-        )
+        device.data?.let { data ->
+            Text(
+                text = data
+            )
+        }
 
         HorizontalDivider()
     }

@@ -15,7 +15,7 @@ import az.isfan.composechallenge.presentation.view_models.MainViewModel
 fun MainScreen(
     viewModel: MainViewModel = hiltViewModel()
 ) {
-    val devices = viewModel.devices.collectAsStateWithLifecycle().value
+    val devices by viewModel.devices.collectAsStateWithLifecycle()
 
     var timeToRequest by remember {
         mutableStateOf(false)

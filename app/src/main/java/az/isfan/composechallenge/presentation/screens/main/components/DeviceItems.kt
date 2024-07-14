@@ -16,13 +16,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import az.isfan.composechallenge.R
+import az.isfan.composechallenge.domain.models.dto.DeviceDto
 import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 
 @Composable
 fun DeviceItems(
     onButtonClick: (newTime: Boolean) -> Unit,
     timeToRequest: Boolean,
-    devices: List<DeviceApiData>
+    devices: List<DeviceDto>
 ) {
     LazyColumn(
         modifier = Modifier

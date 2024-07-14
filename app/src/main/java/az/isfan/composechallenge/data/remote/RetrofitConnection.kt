@@ -6,8 +6,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
-@Singleton
-class RetrofitConnection {
+object RetrofitConnection {
     private val BASE_URL = "https://api.restful-api.dev"
 
     private val client = OkHttpClient.Builder()

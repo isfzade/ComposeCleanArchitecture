@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Compose Challenge</string>
+    <string name="device_id">Device ID</string>
+    <string name="request">Request</string>
+    <string name="requested">Requested to call data</string>
+    <string name="not_requested">Not requested to call data</string>
+    <string name="no_device">No device found</string>
+    <string name="clear">Clear</string>
 </resources>

@@ -1,4 +1,4 @@
-package az.isfan.composechallenge.view.activity
+package az.isfan.composechallenge.presentation.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,12 +9,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import az.isfan.composechallenge.view.screens.main.MainScreen
-import az.isfan.composechallenge.view.ui.theme.ComposeChallengeTheme
+import az.isfan.composechallenge.presentation.screens.main.MainScreen
+import az.isfan.composechallenge.presentation.ui.theme.ComposeChallengeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

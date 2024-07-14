@@ -1,4 +1,4 @@
-package az.isfan.composechallenge.domain.models
+package az.isfan.composechallenge.domain.models.remote
 
 data class DeviceApiData(
     val id: String,

@@ -1,4 +1,4 @@
-package az.isfan.composechallenge.view.view_models
+package az.isfan.composechallenge.presentation.view_models
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

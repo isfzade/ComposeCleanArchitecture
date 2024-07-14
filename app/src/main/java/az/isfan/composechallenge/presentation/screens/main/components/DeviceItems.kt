@@ -1,4 +1,4 @@
-package az.isfan.composechallenge.view.screens.main.components
+package az.isfan.composechallenge.presentation.screens.main.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues

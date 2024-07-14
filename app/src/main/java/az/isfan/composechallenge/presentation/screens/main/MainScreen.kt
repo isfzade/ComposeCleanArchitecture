@@ -1,4 +1,4 @@
-package az.isfan.composechallenge.view.screens.main
+package az.isfan.composechallenge.presentation.screens.main
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -8,8 +8,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import az.isfan.composechallenge.view.screens.main.components.DeviceItems
-import az.isfan.composechallenge.view.view_models.MainViewModel
+import az.isfan.composechallenge.presentation.screens.main.components.DeviceItems
+import az.isfan.composechallenge.presentation.view_models.MainViewModel
 
 @Composable
 fun MainScreen(

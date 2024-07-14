@@ -1,10 +1,9 @@
 package az.isfan.composechallenge.data.remote
 
 import az.isfan.composechallenge.data.remote.service.ApiService
-import retrofit2.converter.gson.GsonConverterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import javax.inject.Singleton
+import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitConnection {
     private val BASE_URL = "https://api.restful-api.dev"

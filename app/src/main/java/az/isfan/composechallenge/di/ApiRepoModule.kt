@@ -1,8 +1,7 @@
 package az.isfan.composechallenge.di
 
-import az.isfan.composechallenge.data.remote.RetrofitConnection
-import az.isfan.composechallenge.domain.repos.remote.ApiRepo
 import az.isfan.composechallenge.data.remote.repo.ApiRepoImpl
+import az.isfan.composechallenge.domain.repos.remote.ApiRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

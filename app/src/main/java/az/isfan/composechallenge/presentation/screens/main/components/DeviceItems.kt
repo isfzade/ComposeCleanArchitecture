@@ -17,7 +17,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import az.isfan.composechallenge.R
 import az.isfan.composechallenge.domain.models.dto.DeviceDto
-import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 
 @Composable
 fun DeviceItems(

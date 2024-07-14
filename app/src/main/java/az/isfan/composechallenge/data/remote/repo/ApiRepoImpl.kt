@@ -5,8 +5,6 @@ import az.isfan.composechallenge.domain.models.remote.DeviceApiData
 import az.isfan.composechallenge.domain.repos.remote.ApiRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import retrofit2.Response
-import javax.inject.Inject
 
 class ApiRepoImpl: ApiRepo {
     override suspend fun request(): List<DeviceApiData> {

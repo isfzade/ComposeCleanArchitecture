@@ -14,10 +14,9 @@ If there is will not be internet connection the app will work offline.
 <img src="./ss/2.png" alt="drawing" width="150" height="320"/>
 
 The application implements:
-
--Dagger Hilt for dependency injection
--Room for database management
--Retrofit for API calls
+- Dagger Hilt for dependency injection
+- Room for database management
+- Retrofit for API calls
 
 ## API
 

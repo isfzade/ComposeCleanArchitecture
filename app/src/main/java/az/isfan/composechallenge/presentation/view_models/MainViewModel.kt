@@ -3,8 +3,6 @@ package az.isfan.composechallenge.presentation.view_models
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import az.isfan.composechallenge.domain.models.dto.DeviceDto
-import az.isfan.composechallenge.domain.models.remote.DeviceApiData
-import az.isfan.composechallenge.domain.repos.remote.ApiRepo
 import az.isfan.composechallenge.domain.use_cases.RequestAndInsertDevicesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +11,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
